@@ -74,7 +74,7 @@ func (a *aesCrypto) decrypt(ct []byte) []byte {
 	return pt
 }
 
-//Password reads passowrd fron stdin and save password.
+//Password reads a password from stdin and saves the password.
 func password(pwd []byte) error {
 	var err error
 	block, err = newAESCrpto(pwd)

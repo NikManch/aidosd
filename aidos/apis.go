@@ -408,7 +408,7 @@ type transaction struct {
 	Abandoned         *bool  `json:"abandoned,omitempty"`
 }
 
-//dont supprt over 1000 txs.
+//do not support over 1000 txs.
 func listtransactions(conf *Conf, req *Request, res *Response) error {
 	mutex.RLock()
 	defer mutex.RUnlock()
@@ -525,4 +525,12 @@ func getTransaction(tx *bolt.Tx, conf *Conf, tr *gadk.Transaction, inc bool) (*t
 		dt.Abandoned = nil
 	}
 	return dt, nil
+}
+
+func dumpwallet(conf *Conf, req *Request, res *Response) error {
+
+}
+
+func importwallet(conf *Conf, req *Request, res *Response) error {
+
 }

@@ -273,6 +273,10 @@ func Handle(conf *Conf, w http.ResponseWriter, r *http.Request) {
 		err = listtransactions(conf, &req, &res)
 	case "walletpassphrase":
 		err = walletpassphrase(conf, &req, &res)
+	case "dumpwallet":
+		err = walletpassphrase(conf, &req, &res)
+	case "importwallet":
+		err = walletpassphrase(conf, &req, &res)
 	case "sendmany":
 		err = sendmany(conf, &req, &res)
 	case "sendfrom":
